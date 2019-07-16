@@ -1,0 +1,25 @@
+﻿<Window x:Class="BoardGameHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoardGameHelper"
+        xmlns:views="clr-namespace:BoardGameHelper.View"
+        mc:Ignorable="d"
+        Title="Board Game Rating" Height="385" Width="400">
+    <Grid>
+        <!--<views:BoardGameView x:Name="BoardGameViewControl" Margin="10,41,0,0" Loaded="BoardGameViewControl_Loaded" VerticalAlignment="Top"/>-->
+        <views:BoardGameListView x:Name="BoardGameViewControl" Margin="10,52,0,0" Loaded="BoardGameViewControl_Loaded" HorizontalAlignment="Left" Width="370" Height="250" VerticalAlignment="Top"/>
+        <TextBox x:Name="FilterField" HorizontalAlignment="Left" Height="22" Margin="11,17,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146" GotFocus="FilterBox_Focus" TextChanged="FilterBox_TextChanged" LostFocus="FilterBox_LostFocus"/>
+        <StackPanel Orientation="Horizontal" Margin="102,306,0,-5" HorizontalAlignment="Left" Width="175" Height="48" VerticalAlignment="Top">
+            <RadioButton x:Name="RateOneRadio" Content="1" Height="18" Margin="0" Checked="RateRadio_Checked"/>
+            <RadioButton x:Name="RateTwoRadio" Content="2" Height="18" Margin="10,0,0,0" Checked="RateRadio_Checked"/>
+            <RadioButton x:Name="RateThreeRadio" Content="3" Height="18" Margin="10,0,0,0" Checked="RateRadio_Checked"/>
+            <RadioButton x:Name="RateFourRadio" Content="4" Height="18" Margin="10,0,0,0" Checked="RateRadio_Checked"/>
+            <RadioButton x:Name="RateFiveRadio" Content="5" Height="18" Margin="10,0,0,0" Checked="RateRadio_Checked"/>
+        </StackPanel>
+        <Label x:Name="label" Content="Play and rate:" HorizontalAlignment="Left" Margin="12,314,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NewGameField" Text="" HorizontalAlignment="Left" Height="23" Margin="170,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" GotFocus="NewGameField_GotFocus" LostFocus="NewGameField_LostFocus" KeyDown="NewGameField_KeyDown"/>
+        <Button x:Name="RateButton" Content="Rate" HorizontalAlignment="Left" Margin="286,316,0,0" VerticalAlignment="Top" Width="94" Height="24" Click="RateButton_Click"/>
+    </Grid>
+</Window>
